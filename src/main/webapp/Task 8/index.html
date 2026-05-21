@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Task 8 – Form Validation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <span class="tag">Task 8</span>
+        <h1>Form Validation</h1>
+    </div>
+    <form novalidate id="val-form">
+        <div class="field">
+            <label for="v-name">Name <span class="req">*</span></label>
+            <input type="text" id="v-name" name="v-name"
+                   placeholder="Min 3 and Max 20 characters"
+                   minlength="3" maxlength="20" required />
+            <span class="hint">3 – 20 characters required</span>
+        </div>
+        <div class="field">
+            <label for="v-phone">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="v-phone" name="v-phone"
+                   placeholder="10 digit number only"
+                   pattern="[0-9]{10}" required />
+            <span class="hint">Only 10 digit numbers allowed</span>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('val-form');
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll('input').forEach(inp => {
+            inp.classList.remove('error','ok');
+            if (!inp.validity.valid) { inp.classList.add('error'); valid = false; }
+            else inp.classList.add('ok');
+        });
+        if (valid) alert('Form submitted successfully!');
+    });
+    form.querySelectorAll('input').forEach(inp => {
+        inp.addEventListener('input', () => {
+            inp.classList.remove('error','ok');
+            if (inp.value) inp.classList.add(inp.validity.valid ? 'ok' : 'error');
+        });
+    });
+</script>
+</body>
+</html>

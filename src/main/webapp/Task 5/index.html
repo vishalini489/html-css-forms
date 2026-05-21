@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Task 5 – Dropdown (Select Tag)</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <span class="tag">Task 5</span>
+        <h1>Dropdown (Select Tag)</h1>
+    </div>
+    <form>
+        <div class="field">
+            <label for="country">Country</label>
+            <div class="select-wrap">
+                <select id="country" name="country">
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="australia">Australia</option>
+                </select>
+                <span class="arrow">▾</span>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

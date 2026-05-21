@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Task 7 – File Upload Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <span class="tag">Task 7</span>
+        <h1>File Upload Form</h1>
+    </div>
+    <form>
+        <div class="field">
+            <label for="img-upload">Upload Image</label>
+            <label for="img-upload" class="drop-zone" id="drop-label">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
+                </svg>
+                <span id="file-name">Click to choose or drag image here</span>
+                <small>Only images are allowed (jpg, png, gif)</small>
+            </label>
+            <input type="file" id="img-upload" name="img-upload"
+                   accept="image/jpg,image/jpeg,image/png,image/gif"
+                   onchange="document.getElementById('file-name').textContent = this.files[0]?.name || 'Click to choose or drag image here'" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

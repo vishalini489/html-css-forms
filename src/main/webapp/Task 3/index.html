@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Task 3 – Radio Buttons &amp; Checkboxes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <span class="tag">Task 3</span>
+        <h1>Radio Buttons &amp; Checkboxes</h1>
+    </div>
+    <form>
+        <fieldset>
+            <legend>Gender</legend>
+            <div class="radio-group">
+                <label class="choice">
+                    <input type="radio" name="gender" value="male" checked />
+                    <span class="indicator"></span>
+                    Male
+                </label>
+                <label class="choice">
+                    <input type="radio" name="gender" value="female" />
+                    <span class="indicator"></span>
+                    Female
+                </label>
+                <label class="choice">
+                    <input type="radio" name="gender" value="other" />
+                    <span class="indicator"></span>
+                    Other
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobbies <small>(Select all that apply)</small></legend>
+            <div class="check-group">
+                <label class="choice">
+                    <input type="checkbox" name="hobby" value="reading" />
+                    <span class="indicator"></span>
+                    Reading
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="hobby" value="sports" />
+                    <span class="indicator"></span>
+                    Sports
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="hobby" value="music" />
+                    <span class="indicator"></span>
+                    Music
+                </label>
+                <label class="choice">
+                    <input type="checkbox" name="hobby" value="traveling" />
+                    <span class="indicator"></span>
+                    Traveling
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

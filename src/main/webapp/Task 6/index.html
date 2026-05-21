@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Task 6 – Range &amp; Color Input</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+        <span class="tag">Task 6</span>
+        <h1>Range &amp; Color Input</h1>
+    </div>
+    <form>
+        <div class="field">
+            <label for="range-val">Range (0 – 100) <span id="range-display">50</span></label>
+            <input type="range" id="range-val" name="range-val" min="0" max="100" value="50"
+                   oninput="document.getElementById('range-display').textContent = this.value" />
+        </div>
+        <div class="field">
+            <label for="color-val">Choose Color</label>
+            <input type="color" id="color-val" name="color-val" value="#2563eb" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
